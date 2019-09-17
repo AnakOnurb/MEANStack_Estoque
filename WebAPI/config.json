@@ -1,4 +1,4 @@
 ﻿{
-    "connectionString": "mongodb://localhost:27017/mean-stack-registration-login-example",
+    "connectionString": "mongodb://localhost:27017/meanstack_estoque",
     "secret": "API SECRET"
 }
