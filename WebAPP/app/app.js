@@ -19,7 +19,7 @@
                 data: { activeTab: 'home' }
             })
             .state('inventory', {
-                url: '/',
+                url: '/inventory',
                 templateUrl: 'inventory/index.html',
                 controller: 'Inventory.IndexController',
                 controllerAs: 'vm',

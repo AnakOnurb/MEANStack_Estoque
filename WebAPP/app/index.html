@@ -7,28 +7,42 @@
         <link href="/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
         <link href="app-content/app.css" rel="stylesheet" />
     </head>
-    <body class="container">
+    <body>
         <!-- header -->
-        <header id="pageHeader">
-            <ul class="nav nav-tabs">
-                <li ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
-                <li ng-class="{active: activeTab === 'inventory'}"><a ui-sref="inventory">Inventory</a></li>
-                <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
-                <li ng-class="{active: activeTab === 'users'}"><a ui-sref="users">Users</a></li>
-                <li><a href="/login" target="_self">Logout</a></li>
-            </ul>
+        <header>
+            <nav id="headerNav">
+                <div id="navLogo">
+                    logo aqui
+                </div>
+                <div id="navLinks">
+                    <div class="navButton" ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></div>
+                    <div class="navButton" ng-class="{active: activeTab === 'inventory'}"><a ui-sref="inventory">Inventory</a></div>                   
+                    <div class="navButton" ng-class="{active: activeTab === 'users'}"><a ui-sref="users">Users</a></div>
+                </div>
+                <div id="navAccount">
+                    <div class="dropdownContainer">
+                        <img src="app-content/src/user.png" class="accountImage"/>
+                        <div class="dropdownContent">
+                            <span ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></span>
+                            <span><a href="/login" target="_self">Logout</a></span>
+                        </div>
+                    </div>
+                </div>                
+            </nav>
             <div class="flash-message" ng-if="flash">
                 <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
             </div>
         </header>
 
         <!-- main -->
-        <main id="pageMain">
-            <div class="mainContent" ui-view></div>
+        <main>
+            <section ui-view>
+                
+            </section>        
         </main>
 
         <!-- footer -->
-        <footer id="pageFooter"></footer>
+        <footer></footer>
 
         <!-- external scripts -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -46,3 +60,5 @@
         <script src="users/index.controller.js"></script>
     </body>
 </html>
+
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div> -->
