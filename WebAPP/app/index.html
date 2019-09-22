@@ -28,16 +28,15 @@
                         </div>
                     </div>
                 </div>                
-            </nav>
-            <div class="flash-message" ng-if="flash">
-                <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
-            </div>
+            </nav>        
         </header>
 
         <!-- main -->
         <main>
-            <section ui-view>
-                
+            <div id="flashmessage" class="flash-message" ng-if="flash">
+                <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
+            </div>
+            <section ui-view>                
             </section>        
         </main>
 

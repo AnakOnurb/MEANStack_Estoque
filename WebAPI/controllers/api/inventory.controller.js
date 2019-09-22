@@ -7,6 +7,7 @@ var inventoryService = require('services/inventory.service');
 router.post('/addproduct', addProduct);
 router.get('/search/:_name', searchName);
 router.get('/:_id', getProduct);
+router.get('', getAll);
 router.put('/:_id', updateProduct);
 router.delete('/:_id', deleteProduct);
 
@@ -27,6 +28,20 @@ function getProduct(req, res) {
         .then(function (productObject) {
             if (productObject) {
                 res.send(productObject);
+            } else {
+                res.sendStatus(404);
+            }
+        })
+        .catch(function (err) {
+            res.status(400).send(err);
+        });
+}
+
+function getAll(req, res) {
+    inventoryService.getAll()
+        .then(function (productList) {
+            if (productList) {
+                res.send(productList);
             } else {
                 res.sendStatus(404);
             }

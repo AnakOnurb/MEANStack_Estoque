@@ -36,7 +36,7 @@
         }
 
         function GetAll() {
-            return $http.get(apiURL).then(handleSuccess, handleError);
+            return $http.get(apiURL + '/').then(handleSuccess, handleError);
         }
 
         function GetById(_id) {
@@ -48,7 +48,7 @@
         }
 
         function Create(product) {
-            return $http.post(apiURL, product).then(handleSuccess, handleError);
+            return $http.post(apiURL + '/addproduct', product).then(handleSuccess, handleError);
         }
 
         function Update(product) {
