@@ -116,6 +116,7 @@
                 {
                     vm.product = product;
                     fillElements();
+                    creating = false;                    
                 }
             }
         }
