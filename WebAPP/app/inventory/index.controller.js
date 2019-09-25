@@ -15,6 +15,7 @@
         vm.saveProduct = saveProduct;
         vm.deleteProduct = deleteProduct;
         vm.getProduct = getProduct;
+        vm.calcMargin = calcMargin;
 
         var creating = false;
     
@@ -133,7 +134,7 @@
             document.getElementById('labelprice').value = vm.product.labelprice;
             document.getElementById('pricepaid').value = vm.product.pricepaid;
             document.getElementById('suggestedprice').value = vm.product.suggestedprice;
-            document.getElementById('marginprice').value = Number(vm.product.suggestedprice) * 2;
+            document.getElementById('marginprice').value = Number(vm.product.pricepaid) * 2;
         }
 
         function fillProduct(withId)
@@ -170,6 +171,11 @@
                     suggestedprice: document.getElementById('suggestedprice').value
                 };
             }
+        }
+
+        function calcMargin()
+        {
+            document.getElementById('marginprice').value = Number(document.getElementById('pricepaid').value) * 2;
         }
     }
 

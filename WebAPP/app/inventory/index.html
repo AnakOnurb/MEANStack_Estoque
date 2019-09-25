@@ -46,19 +46,19 @@
                 </div>
                 <div class="form-group">
                     <label for="labelprice">Label Price</label>
-                    <input type="text" id="labelprice" class="form-control clear" required/>
+                    <input type="number" id="labelprice" class="form-control clear" required/>
                 </div>
                 <div class="form-group">
                     <label for="pricepaid">Price Paid</label>
-                    <input type="text" id="pricepaid" class="form-control clear" required/>
+                    <input type="number" id="pricepaid" class="form-control clear" ng-blur="vm.calcMargin()" required/>
                 </div>
                 <div class="form-group">
                     <label for="marginprice">100% Margin Price</label>
-                    <input type="text" id="marginprice" class="form-control clear" disabled/>
+                    <input type="number" id="marginprice" class="form-control clear" disabled/>
                 </div>
                 <div class="form-group">
                     <label for="suggestedprice">Suggested Price</label>
-                    <input type="text" id="suggestedprice" class="form-control clear" required/>
+                    <input type="number" id="suggestedprice" class="form-control clear" required/>
                 </div>
             </div>
             <div class="form-group">
