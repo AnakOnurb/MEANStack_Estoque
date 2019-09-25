@@ -5,16 +5,73 @@
     <title>Login</title>
     <link rel="stylesheet" href="/bootstrap-3.3.5/css/bootstrap.min.css" />
     <style type="text/css">
+        html{
+            height: 100%;
+        }
+
+        body{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(1,199,164,0.3);
+        }
         .form-container {
-            width: 400px;
+            width: 300px;
             margin: auto;
+        }
+
+        .header {
+            flex-basis: 10%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 50pt;
         }
 
         .credits {
             border-top: 1px solid #ddd;
             margin-top: 40px;
             padding-top: 20px;
+            flex-basis: 10%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white; 
+        }
+
+        credits a {
+            color: white;            
+        }
+
+        .pageContent{
+            display:flex;
+            flex-direction: row;
+            flex-basis: 80%;          
+            background-color: rgba(1,199,164,0.3);
+        }
+
+        .pageLogo{
+            flex-basis: 60%;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+        }
+
+        .pageLogin{
+            flex-basis: 40%;
+            display:flex;
+            justify-content:center;
+            align-items: flex-start;
+        }
+
+        .logoImg{
+            max-width: 60%;
+            height: auto;
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        Inventory Control
+    </header>
